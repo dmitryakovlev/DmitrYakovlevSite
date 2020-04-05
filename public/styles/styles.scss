@@ -6,8 +6,11 @@ $color-secondary-dark: #171C27;
 $color-light: #EEEEEE;
 
 // Partials
+@import "fonts";
 @import "header";
 @import "skills";
+@import "experience";
+@import "about";
 
 
 *, body {
@@ -22,7 +25,7 @@ a {
 }
 
 h1 {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: $color-light;
   font-size: 48px;
   font-weight: 300;
@@ -53,3 +56,12 @@ p {
   width: 100%;
   max-width: 1200px;
 }
+
+// Color for text
+.text-dark {
+  color: $color-secondary-dark;
+}
+
+
+
+

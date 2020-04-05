@@ -1,0 +1,22 @@
+.experience_background {
+  background-color: $color-secondary-dark;
+}
+
+.experience_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  img {
+    height: 60px;
+    align-items: center;
+    margin: 20px 40px 30px;
+    width: 240px;
+
+    &:first-child {
+      height: 50px;
+    }
+  }
+}

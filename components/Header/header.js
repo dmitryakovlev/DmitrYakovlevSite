@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const Wave = () => (
   <div className="wave">
     <svg viewBox="0 0 1920 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -25,18 +23,10 @@ const Header = () => (
         with a proposal for
         cooperation. I'm pleased to take a part in interesting projects. Let's start!</p>
       <div className="header_img-container">
-        <Link href="https://github.com/dmitryakovlev">
-          <a className="header_img-github"></a>
-        </Link>
-        <Link href="https://www.linkedin.com/in/dmitryakovlev/">
-          <a className="header_img-linkedin"></a>
-        </Link>
-        <Link href="https://www.facebook.com/dmitr.yakovlev">
-          <a className="header_img-facebook"></a>
-        </Link>
-        <Link href="https://www.instagram.com/dmitr.yakovlev/">
-          <a className="header_img-instagram"></a>
-        </Link>
+        <a href="https://github.com/dmitryakovlev" className="header_img-github"></a>
+        <a href="https://www.linkedin.com/in/dmitryakovlev/" className="header_img-linkedin"></a>
+        <a href="https://www.facebook.com/dmitr.yakovlev" className="header_img-facebook"></a>
+        <a href="https://www.instagram.com/dmitr.yakovlev/" className="header_img-instagram"></a>
       </div>
       <a href="/" className="header_btn">Open my CV</a>
     </div>

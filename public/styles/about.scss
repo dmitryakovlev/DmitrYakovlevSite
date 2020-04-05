@@ -1,0 +1,14 @@
+.about_background {
+  background-color: $color-primary;
+}
+
+.about_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .about_text {
+    max-width: 500px;
+  }
+}

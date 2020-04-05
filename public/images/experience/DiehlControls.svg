@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="285px" height="95px" viewBox="0 0 285 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Diehl Controls</title>
+    <desc>Created with Sketch.</desc>
+    <g id="For-Styles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Apple-TV-Copy" transform="translate(-818.000000, -1579.000000)" fill="#EEEEEE">
+            <g id="My-Work-Experience" transform="translate(0.000000, 1350.000000)">
+                <g id="Diehl-Controls" transform="translate(817.000000, 229.000000)">
+                    <g id="Diehl" transform="translate(1.000000, 0.000000)">
+                        <path d="M0,47.165493 L43.6647995,47.165493 C58.1331685,47.165493 63.2209467,42.4113349 63.2209467,30.7506245 L63.221831,16.4157528 C63.221831,4.75504183 58.1331685,0.000883795231 43.6647995,0.000883795231 L0,0 L0,47.165493 L0,47.165493 Z M14.4683689,11.7295728 L40.1439857,11.7295728 C46.3358831,11.7295728 48.7508093,13.4864486 48.7508093,20.1987748 L48.7508093,26.5782653 C48.7508093,33.2888234 46.3349988,35.048348 40.1439857,35.048348 L14.4683689,35.0474642 L14.4683689,11.7295728 L14.4683689,11.7295728 Z" id="path2556"></path>
+                        <polygon id="polygon2558" points="76.2676056 47.165493 90.3169014 47.165493 90.3169014 0 76.2676056 0"></polygon>
+                        <polygon id="polygon2560" points="103.362676 47.165493 155.545775 47.165493 155.545775 35.8287886 117.746197 35.8287886 117.746197 28.2724571 152.76045 28.2724571 152.76045 18.5036981 117.746197 18.5036981 117.746197 10.944718 154.702269 10.944718 154.702269 0 103.362676 0"></polygon>
+                        <polygon id="polygon2562" points="165.580986 47.165493 179.993572 47.165493 179.993572 29.3168712 210.384946 29.3168712 210.384946 47.165493 224.788732 47.165493 224.788732 0 210.384946 0 210.384946 16.808622 179.993572 16.808622 179.993572 0 165.580986 0"></polygon>
+                        <polygon id="polygon2564" points="237.834507 47.165493 285 47.165493 285 35.0474644 252.356514 35.0474644 252.356514 0 237.834507 0"></polygon>
+                    </g>
+                    <text id="Controls" font-family="MyriadPro-Regular, Myriad Pro" font-size="47" font-weight="normal" letter-spacing="1.786416">
+                        <tspan x="0" y="94">Controls</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

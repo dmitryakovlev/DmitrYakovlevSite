@@ -8,7 +8,7 @@
 }
 
 .header_second-heading {
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .header_text {
@@ -34,22 +34,27 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transition: 0.15s ease-in;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .header_img-github {
-  background-image: url("../images/icons/github.svg");
+  background-image: url("/images/icons/github.svg");
 }
 
 .header_img-linkedin {
-  background-image: url("../images/icons/linkedin.svg");
+  background-image: url("/images/icons/linkedin.svg");
 }
 
 .header_img-facebook {
-  background-image: url("../images/icons/facebook.svg");
+  background-image: url("/images/icons/facebook.svg");
 }
 
 .header_img-instagram {
-  background-image: url("../images/icons/instagram.svg");
+  background-image: url("/images/icons/instagram.svg");
 }
 
 .header_btn {

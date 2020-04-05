@@ -4,9 +4,26 @@
 
 .skills_container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .skill_container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 20px 20px 30px;
+  max-width: 360px;
+  min-width: 280px;
+
+  .skill_img {
+    margin-bottom: 20px;
+    height: 80px;
+  }
+
+  .skill_text {
+    margin-top: 10px;
+    text-align: center;
+  }
 }

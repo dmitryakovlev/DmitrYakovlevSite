@@ -1,8 +1,8 @@
 const Skill = ({img, heading, text}) => (
   <div className="skill_container">
-    <img src={img}/>
+    <img className="skill_img" src={img} alt={heading}/>
     <h2>{heading}</h2>
-    <p>{text}</p>
+    <p className="skill_text">{text}</p>
   </div>
 );
 
