@@ -1,0 +1,40 @@
+.portfolio_background {
+  background: $color-light;
+}
+
+.portfolio_blocks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.portfolio-block_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 50px 30px;
+  max-width: 580px;
+  background-color: $color-gray;
+  border-radius: 25px;
+}
+
+.portfolio-block_heading {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.portfolio-block_img-text {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-block_img {
+  margin-right: 30px;
+  width: 128px;
+  height: 128px;
+}
+
+.portfolio-block_text {
+
+}

@@ -1,0 +1,20 @@
+.footer_background {
+  background-color: $color-light;
+  border-top: 2px dashed $color-gray;
+}
+
+.footer_mail {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.footer_page-footer {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: $color-secondary;
+
+  p {
+    max-width: 1200px;
+  }
+}
