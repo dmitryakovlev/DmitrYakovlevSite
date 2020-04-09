@@ -1,0 +1,66 @@
+.experience_background {
+  background-color: $color-secondary-dark;
+  border-top: 0.125rem dashed $color-secondary;
+}
+
+.experience_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  img {
+    margin: 1.25rem 2.5rem;
+    width: 15rem;
+    min-width: 12.5rem;
+    height: 3.75rem;
+
+    &:first-child {
+      height: 3.125rem;
+    }
+
+    &:last-child {
+      height: 4rem;
+    }
+  }
+}
+
+// 1200px
+@media (max-width: 75rem) {
+  .experience_container img {
+    margin: 0.75rem 1.25rem;
+    height: 3.125rem;
+
+    &:first-child {
+      height: 2.5rem;
+    }
+
+    &:last-child {
+      height: 3.5rem;
+    }
+  }
+}
+
+// 760px
+@media (max-width: 47.5rem) {
+  .experience_container {
+    flex-direction: column;
+
+    img {
+      margin: 0;
+      padding: 2rem 0;
+      height: 2rem;
+      box-sizing: content-box;
+      border-bottom: 1px solid $color-secondary;
+
+      &:first-child {
+        height: 1.5rem;
+      }
+
+      &:last-child {
+        height: 2.5rem;
+        border-bottom: none;
+      }
+    }
+  }
+}

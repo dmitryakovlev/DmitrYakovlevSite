@@ -43,14 +43,29 @@ const Wave = () => (
   </div>
 );
 
+const companyLogo = [
+  {
+    id: 0,
+    src: "/images/experience/StudioF8.svg",
+  },
+  {
+    id: 1,
+    src: "/images/experience/DiehlControls.svg",
+  },
+  {
+    id: 2,
+    src: "/images/experience/SmartechIT.svg",
+  },
+];
+
 const Experience = () => (
   <div className="experience_background">
     <div className="container">
       <h1>My Work Experience</h1>
       <div className="experience_container">
-        <img src="/images/experience/StudioF8.svg" />
-        <img src="/images/experience/DiehlControls.svg" />
-        <img src="/images/experience/SmartechIT.svg" />
+        {companyLogo.map((logo) => (
+          <img src={logo.src} key={logo.id} />
+        ))}
       </div>
     </div>
     <Wave />

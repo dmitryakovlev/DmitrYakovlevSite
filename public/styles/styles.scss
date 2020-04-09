@@ -1,10 +1,10 @@
 // Variables
-$color-primary: #FCC70F;
-$color-secondary: #1E2331;
-$color-secondary-light: #3F495F;
-$color-secondary-dark: #171C27;
-$color-light: #EEEEEE;
-$color-gray: #E0E0E0;
+$color-primary: #fcc70f;
+$color-secondary: #1e2331;
+$color-secondary-light: #3f495f;
+$color-secondary-dark: #171c27;
+$color-light: #eeeeee;
+$color-gray: #e0e0e0;
 
 // Partials
 @import "fonts";
@@ -15,11 +15,12 @@ $color-gray: #E0E0E0;
 @import "potrfolio";
 @import "footer";
 
-
-*, body {
+*,
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Prompt', sans-serif;
+  font-size: 16px;
+  font-family: "Prompt", sans-serif;
   font-weight: 400;
   box-sizing: border-box;
 }
@@ -29,20 +30,22 @@ a {
 }
 
 h1 {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   color: $color-light;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 300;
+  text-align: center;
 }
 
 h2 {
   color: $color-light;
-  font-size: 24px;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 p {
   color: $color-light;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 // Decoration wave
@@ -55,10 +58,10 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: -2px auto 0; // minus for space between bg and wave
-  padding: 80px 0 100px;
+  margin: -0.125rem auto 0; // minus for space between bg and wave
+  padding: 5rem 1rem 6.25rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 75rem;
 }
 
 // Color for text
@@ -66,6 +69,13 @@ p {
   color: $color-secondary-dark;
 }
 
+// 760px
+@media (max-width: 47.5rem) {
+  h1 {
+    font-size: 1.75rem;
+  }
 
-
-
+  h2 {
+    font-size: 1.25rem;
+  }
+}

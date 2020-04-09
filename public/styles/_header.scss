@@ -1,9 +1,13 @@
 .header_background {
-  background: linear-gradient(180deg, $color-secondary-light 10%, $color-secondary 100%);
+  background: linear-gradient(
+    180deg,
+    $color-secondary-light 10%,
+    $color-secondary 100%
+  );
 }
 
 .header_heading {
-  margin-top: 70px;
+  margin-top: 4.375rem;
   margin-bottom: 0;
 }
 
@@ -12,25 +16,22 @@
 }
 
 .header_text {
-  margin-top: 30px;
-  max-width: 600px;
+  margin-top: 1.875rem;
+  max-width: 35.5rem;
   text-align: center;
 }
 
 .header_img-container {
   display: flex;
   justify-content: space-between;
-  margin: 35px 0;
-  width: 280px;
+  margin: 2.2rem 0;
+  width: 17.5rem;
 }
 
-.header_img-github,
-.header_img-linkedin,
-.header_img-facebook,
-.header_img-instagram {
+.header_img-social {
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -61,10 +62,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
-  width: 300px;
+  height: 3.75rem;
+  width: 18.75rem;
   background-color: $color-primary;
   color: $color-secondary-dark;
-  font-size: 20px;
-  border-radius: 100px;
+  font-size: 1.25rem;
+  border-radius: 6.25rem;
+}
+
+// 760px
+@media (max-width: 47.5rem) {
+  .header_heading {
+    margin-top: 2rem;
+  }
+
+  .header_text {
+    margin-top: 1.25rem;
+  }
+
+  .header_img-container {
+    margin: 2.5rem 0;
+    width: 15rem;
+
+    .header_img-social {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .header_btn {
+    width: 16.25rem;
+    height: 3.25rem;
+    font-size: 1rem;
+  }
 }

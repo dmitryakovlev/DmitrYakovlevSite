@@ -5,7 +5,7 @@ const skillData = [
     id: 0,
     img: "/images/skills/ui.svg",
     heading: "Graphic editors",
-    text: "Work in Sketch, Framer X, Zeplin, Photoshop and Illustrator.",
+    text: "Work in Sketch, FramerX, Zeplin, Photoshop and Illustrator.",
   },
   {
     id: 1,

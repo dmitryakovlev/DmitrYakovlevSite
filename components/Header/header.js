@@ -43,6 +43,29 @@ const Wave = () => (
   </div>
 );
 
+const socialLink = [
+  {
+    id: 0,
+    link: "https://github.com/dmitryakovlev",
+    class: "header_img-social header_img-github",
+  },
+  {
+    id: 1,
+    link: "https://www.linkedin.com/in/dmitryakovlev/",
+    class: "header_img-social header_img-linkedin",
+  },
+  {
+    id: 2,
+    link: "https://www.facebook.com/dmitr.yakovlev",
+    class: "header_img-social header_img-facebook",
+  },
+  {
+    id: 3,
+    link: "https://www.instagram.com/dmitr.yakovlev/",
+    class: "header_img-social header_img-instagram",
+  },
+];
+
 const Header = () => (
   <div className="header_background">
     <div className="container">
@@ -56,22 +79,14 @@ const Header = () => (
         part in interesting projects. Let's start!
       </p>
       <div className="header_img-container">
-        <a
-          href="https://github.com/dmitryakovlev"
-          className="header_img-github"
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/dmitryakovlev/"
-          className="header_img-linkedin"
-        ></a>
-        <a
-          href="https://www.facebook.com/dmitr.yakovlev"
-          className="header_img-facebook"
-        ></a>
-        <a
-          href="https://www.instagram.com/dmitr.yakovlev/"
-          className="header_img-instagram"
-        ></a>
+        {socialLink.map((social) => (
+          <a
+            href={social.link}
+            className={social.class}
+            key={social.id}
+            target="_blank"
+          ></a>
+        ))}
       </div>
       <a href="/" className="header_btn">
         Open my CV
