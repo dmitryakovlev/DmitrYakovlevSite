@@ -32,9 +32,10 @@
 }
 
 .portfolio-block_img {
+  flex-shrink: 0;
   margin-right: 1.5rem;
-  width: 128px;
-  height: 128px;
+  width: 8rem;
+  height: 8rem;
   border-radius: 1.25rem;
 }
 
