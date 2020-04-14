@@ -10,7 +10,7 @@ const portfolioData = [
   },
   {
     id: 1,
-    img: "./images/portfolio/PupS.png",
+    img: "./images/portfolio/Pups.png",
     heading: "PupS",
     text:
       "Mobile application project for iPhones to control the electronic dog. The project was implemented in the process of learning at the SWPS University. This is only a concept, so all names and characters are fictitious.",
