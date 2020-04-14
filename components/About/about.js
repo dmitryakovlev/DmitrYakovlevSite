@@ -47,7 +47,7 @@ const About = () => (
     <div className="container">
       <h1 className="text-dark">About Me</h1>
       <div className="about_container">
-        {/* <img src="/images/about/picture.svg" /> */}
+        <img src="/images/about/picture.svg" />
         <p className="text-dark about_text">
           I’m a professional web-designer and junior design developer.
           <br />

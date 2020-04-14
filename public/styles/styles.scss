@@ -69,13 +69,5 @@ p {
   color: $color-secondary-dark;
 }
 
-// 760px
-@media (max-width: 47.5rem) {
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
-}
+// Partial with responsive styles
+@import "responsive";

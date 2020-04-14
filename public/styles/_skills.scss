@@ -24,32 +24,6 @@
   .skill_text {
     margin-top: 0.625rem;
     text-align: center;
-  }
-}
-
-// 1200px
-@media (max-width: 75rem) {
-  .skill_container .skill_img {
-    height: 4rem;
-  }
-}
-
-// 760px
-@media (max-width: 47.5rem) {
-  .skills_container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skill_container {
-    margin: 1.25rem 1.25rem 1.875rem;
-
-    &:last-child {
-      margin: 1.25rem 1.25rem 0;
-    }
-
-    .skill_img {
-      height: 3.5rem;
-    }
+    opacity: 0.7;
   }
 }
