@@ -88,7 +88,7 @@ const Header = () => (
           ></a>
         ))}
       </div>
-      <a href="/" className="header_btn">
+      <a href="/pdf/CV0420.pdf" className="header_btn" target="_blank">
         Open my CV
       </a>
     </div>
