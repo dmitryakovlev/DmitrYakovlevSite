@@ -1,0 +1,73 @@
+.home-header {
+  background-color: $color-secondary;
+}
+
+.home-header__title {
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+.home-header__subtitle {
+  font-weight: 200;
+}
+
+.home-header__text {
+  margin-top: 1.5rem;
+  max-width: 38rem;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.home-header__social {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+  width: 18rem;
+}
+
+.home-header__social-img {
+  display: flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: ease-in-out 200ms;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &.github {
+    background-image: url("/images/icons/github.svg");
+  }
+
+  &.linkedin {
+    background-image: url("/images/icons/linkedin.svg");
+  }
+
+  &.facebook {
+    background-image: url("/images/icons/facebook.svg");
+  }
+
+  &.instagram {
+    background-image: url("/images/icons/instagram.svg");
+  }
+}
+
+.home-header__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 18rem;
+  background-color: $color-primary;
+  color: $color-secondary;
+  font-size: 1.25rem;
+  border-radius: 10rem;
+  transition: ease-in-out 200ms;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

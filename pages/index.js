@@ -1,17 +1,12 @@
-import Header from "../components/Header/header";
-import Skills from "../components/Skills/skills";
-import Experience from "../components/Experience/experience";
-import About from "../components/About/about";
-import Portfolio from "../components/Portfolio/portfolio";
-import Footer from "../components/Footer/footer";
+import Layout from "@components/Layout";
+import Home from "@components/home";
 
-export default () => (
-  <div>
-    <Header />
-    <Skills />
-    <Experience />
-    <About />
-    <Portfolio />
-    <Footer />
-  </div>
-);
+export default function HomePage() {
+  return (
+    <>
+      <Layout title="Dmitriy Yakovlev">
+        <Home />
+      </Layout>
+    </>
+  );
+}
