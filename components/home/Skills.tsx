@@ -1,45 +1,49 @@
-const skillData = [
+import { FC } from "react";
+
+interface ISkillData {
+  id: number;
+  img: string;
+  title: string;
+  text: string;
+}
+
+const skillData: ISkillData[] = [
   {
     id: 0,
     img: "/images/skills/ui.svg",
-    heading: "Graphic editors",
+    title: "Graphic editors",
     text: "Work in Sketch, Figma, FramerX, Zeplin, Photoshop and Illustrator.",
   },
   {
     id: 1,
     img: "/images/skills/frontend.svg",
-    heading: "Frontend skills",
+    title: "Frontend skills",
     text:
       "Knowledge of HTML, CSS (incl. SASS, TailwindCSS, Bootstrap), JavaScript (incl. jQuery), React (incl. NextJS), C# and Git.",
   },
   {
     id: 2,
     img: "/images/skills/ux.svg",
-    heading: "User experience",
+    title: "User experience",
     text: "Understanding users problems and finding solutions.",
   },
 ];
 
-const Skill = ({ img, heading, text }) => (
-  <div className="skill_container">
-    <img className="skill_img" src={img} alt={heading} />
-    <h2>{heading}</h2>
-    <p className="skill_text">{text}</p>
+const Skill: FC<ISkillData> = ({ img, title, text }) => (
+  <div className="home-skills__item">
+    <img className="home-skills__img" src={img} alt={title} />
+    <h2>{title}</h2>
+    <p className="home-skills__text">{text}</p>
   </div>
 );
 
 const Skills = () => (
-  <div className="skills_background">
+  <div className="home home-skills" id="skills">
     <div className="container">
       <h1>My Skills</h1>
-      <div className="skills_container">
-        {skillData.map((skill) => (
-          <Skill
-            img={skill.img}
-            heading={skill.heading}
-            text={skill.text}
-            key={skill.id}
-          />
+      <div className="home-skills__block">
+        {skillData.map((param) => (
+          <Skill {...param} key={param.id} />
         ))}
       </div>
     </div>

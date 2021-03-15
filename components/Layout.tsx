@@ -11,7 +11,7 @@ const Layout: FC<{
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      {/* <link rel="shortcut icon" href="/images/favicon.webp"></link> */}
+      <link rel="shortcut icon" href="/images/favicon.webp"></link>
     </Head>
     <main className="main">{children}</main>
     <Footer />

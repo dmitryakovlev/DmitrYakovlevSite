@@ -1,9 +1,16 @@
 .home-header {
+  position: relative;
+  justify-content: center;
+  min-height: 100vh;
   background-color: $color-secondary;
+
+  *:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 4px rgba($color-primary, 0.3);
+  }
 }
 
 .home-header__title {
-  margin-top: 4rem;
   margin-bottom: 0;
 }
 
@@ -15,7 +22,7 @@
   margin-top: 1.5rem;
   max-width: 38rem;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .home-header__social {
@@ -35,23 +42,23 @@
   transition: ease-in-out 200ms;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 0.55;
   }
 
   &.github {
-    background-image: url("/images/icons/github.svg");
+    background-image: url("/images/social/github.svg");
   }
 
   &.linkedin {
-    background-image: url("/images/icons/linkedin.svg");
+    background-image: url("/images/social/linkedin.svg");
   }
 
   &.facebook {
-    background-image: url("/images/icons/facebook.svg");
+    background-image: url("/images/social/facebook.svg");
   }
 
   &.instagram {
-    background-image: url("/images/icons/instagram.svg");
+    background-image: url("/images/social/instagram.svg");
   }
 }
 
@@ -69,5 +76,86 @@
 
   &:hover {
     opacity: 0.75;
+  }
+}
+
+.home-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 14px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .mouse {
+    height: 3rem;
+    width: 1.75rem;
+    border: 2px solid $color-light;
+    border-radius: 1rem;
+    transform: none;
+  }
+
+  .wheel {
+    position: relative;
+    display: block;
+    margin: 0.375rem auto;
+    height: 0.375rem;
+    width: 2px;
+    background: $color-light;
+    animation: mouse-wheel 1.2s ease infinite;
+  }
+
+  .one,
+  .two,
+  .three {
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    transform: rotate(45deg);
+    border-right: 3px solid $color-light;
+    border-bottom: 3px solid $color-light;
+    margin-bottom: 3px;
+    animation: mouse-scroll 1s infinite;
+  }
+
+  .one {
+    margin-top: 0.5rem;
+    animation-delay: 0.1s;
+  }
+
+  .two {
+    animation-delay: 0.2s;
+  }
+
+  .three {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes mouse-wheel {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+
+  @keyframes mouse-scroll {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (max-height: 48rem) {
+    display: none;
   }
 }

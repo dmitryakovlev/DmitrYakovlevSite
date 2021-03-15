@@ -1,29 +1,28 @@
-.skills_background {
-  background-color: $color-secondary-dark;
+.home-skills {
+  background-color: $color-secondary;
+  border-top: 2px dashed rgba($color-light, 0.1);
 }
 
-.skills_container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.home-skills__block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
 }
 
-.skill_container {
+.home-skills__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1.25rem 1.25rem 0;
-  max-width: 22.5rem;
-  min-width: 12.5rem;
 
-  .skill_img {
+  .home-skills__img {
     margin-bottom: 1.25rem;
     height: 5rem;
+    user-select: none;
   }
 
-  .skill_text {
-    margin-top: 0.625rem;
+  .home-skills__text {
+    margin-top: 0.5rem;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.55;
   }
 }

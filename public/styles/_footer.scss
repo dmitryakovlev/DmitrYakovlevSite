@@ -1,21 +1,16 @@
-.footer_background {
-  background-color: $color-light;
-  border-top: 0.125rem dashed $color-gray;
+.footer {
+  background-color: $color-secondary;
 }
 
-.footer_mail {
+.footer__mail {
   font-size: 1.5rem;
   text-decoration: underline;
 }
 
-.footer_page-footer {
+.footer__copyright {
+  border-top: 2px dashed rgba($color-light, 0.1);
   display: flex;
   justify-content: center;
   padding: 2.5rem;
-  background-color: $color-secondary;
-
-  p {
-    max-width: 75rem;
-    text-align: center;
-  }
+  text-align: center;
 }

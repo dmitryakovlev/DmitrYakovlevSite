@@ -1,13 +1,14 @@
-.portfolio_background {
+.home-portfolio {
+  margin-top: -2px;
   background: $color-light;
 }
 
-.portfolio_blocks {
+.home-portfolio__block {
   display: flex;
   flex-direction: column;
 }
 
-.portfolio-block_container {
+.home-portfolio__item {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.25rem;
@@ -21,52 +22,61 @@
   }
 }
 
-.portfolio-block_heading {
+.home-portfolio__title {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
 }
 
-.portfolio-block_img-text {
+.home-portfolio__container {
   display: flex;
   align-items: center;
 }
 
-.portfolio-block_img {
+.home-portfolio__img {
   flex-shrink: 0;
   margin-right: 1.5rem;
   width: 8rem;
   height: 8rem;
-  border-radius: 1.25rem;
+  border-radius: 1rem;
+  user-select: none;
 }
 
-.portfolio-block_text {
-  opacity: 0.7;
+.home-portfolio__text {
+  opacity: 0.55;
 }
 
-.portfolio-block_btn {
+.home-portfolio__btn-container {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
   margin-top: 1.5rem;
-  color: $color-secondary-dark;
+}
 
-  &::before {
-    content: "";
-    margin-right: 10px;
+.home-portfolio__btn {
+  display: flex;
+  align-items: center;
+  color: $color-secondary;
+  user-select: none;
+
+  .home-portfolio__btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
     height: 2rem;
     width: 2rem;
-    background-image: url("/images/portfolio/showIcon.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    font-size: 1.25rem;
+    border: 2px solid $color-secondary;
+    border-radius: 10rem;
     transition: ease-in-out 200ms;
   }
 
   &:hover {
-    text-decoration: underline;
+    .home-portfolio__btn-icon {
+      background-color: $color-secondary;
+      color: #fff;
+    }
 
-    &::before {
-      background-image: url("/images/portfolio/showIconHover.svg");
+    .home-portfolio__btn-text {
+      text-decoration: underline;
     }
   }
 }
