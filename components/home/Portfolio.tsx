@@ -1,4 +1,5 @@
 import { FC } from "react";
+import ArrowIcon from "./Arrow";
 
 interface IPortfolioData {
   id: number;
@@ -48,7 +49,7 @@ const PortfolioBlock: FC<IPortfolioData> = ({ img, title, text }) => (
     <div className="home-portfolio__btn-container">
       <a href="/" className="home-portfolio__btn">
         <span className="home-portfolio__btn-text">Learn more</span>
-        <span className="home-portfolio__btn-icon">&#8594;</span>
+        <ArrowIcon />
       </a>
     </div>
   </div>

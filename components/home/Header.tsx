@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { useState, useEffect, FC } from "react";
 
 interface ISocialLink {
   id: number;
@@ -37,6 +37,42 @@ const HeaderSocial: FC<ISocialLink> = ({ url, className }) => (
   ></a>
 );
 
+const Scroll = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
+
+  let visible = false;
+  if (scrollPosition <= 25) {
+    visible = true;
+  }
+
+  return (
+    <>
+      <a href="#skills" className={`home-scroll ${visible ? "" : "disable"}`}>
+        <div className="mouse">
+          <div className="wheel"></div>
+        </div>
+        <div>
+          <span className="one"></span>
+          <span className="two"></span>
+          <span className="three"></span>
+        </div>
+      </a>
+    </>
+  );
+};
+
 const Header = () => (
   <div className="home home-header">
     <div className="container">
@@ -57,17 +93,8 @@ const Header = () => (
       <a href="/pdf/CV0321.pdf" className="home-header__btn" target="_blank">
         Open my CV
       </a>
+      <Scroll />
     </div>
-    <a href="#skills" className="home-scroll">
-      <div className="mouse">
-        <div className="wheel"></div>
-      </div>
-      <div>
-        <span className="one"></span>
-        <span className="two"></span>
-        <span className="three"></span>
-      </div>
-    </a>
   </div>
 );
 

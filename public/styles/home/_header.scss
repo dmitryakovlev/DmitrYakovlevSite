@@ -80,12 +80,18 @@
 }
 
 .home-scroll {
+  opacity: 0.25;
   position: absolute;
   bottom: 40px;
   left: calc(50% - 14px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: ease-in-out 200ms;
+
+  &.disable {
+    opacity: 0;
+  }
 
   .mouse {
     height: 3rem;
