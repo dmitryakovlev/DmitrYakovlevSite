@@ -58,16 +58,16 @@ const companyLogo: ICompanyLogo[] = [
   },
 ];
 
-const ExperienceLogo: FC<ICompanyLogo> = ({ url }) => <img src={url} />;
+// const ExperienceLogo: FC<ICompanyLogo> = ({ url }) => <img src={url} />;
 
 const Experience = () => (
   <div className="home home-experience">
     <div className="container">
       <h1>My Work Experience</h1>
       <div className="home-experience__block">
-        {companyLogo.map((param) => (
+        {/* {companyLogo.map((param) => (
           <ExperienceLogo {...param} key={param.id} />
-        ))}
+        ))} */}
       </div>
     </div>
     <Wave />

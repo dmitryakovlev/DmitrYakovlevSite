@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Skills />
+      {/* <Skills />
       <Experience />
       <About />
-      <Portfolio />
+      <Portfolio /> */}
     </>
   );
 }

@@ -39,7 +39,7 @@ const About = () => (
     <div className="container">
       <h1 className="text-dark">About Me</h1>
       <div className="home-about__container">
-        <img src="/images/about/picture.svg" />
+        {/* <img src="/images/about/picture.svg" /> */}
         <p className="text-dark home-about__text">
           I’m a professional web-designer and junior design developer.
           <br />

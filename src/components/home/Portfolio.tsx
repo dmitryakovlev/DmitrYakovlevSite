@@ -43,14 +43,14 @@ const PortfolioBlock: FC<IPortfolioData> = ({ img, title, text }) => (
   <div className="home-portfolio__item">
     <h2 className="home-portfolio__title text-dark">{title}</h2>
     <div className="home-portfolio__container">
-      <img className="home-portfolio__img" src={img} alt={title} />
+      {/* <img className="home-portfolio__img" src={img} alt={title} /> */}
       <p className="home-portfolio__text text-dark">{text}</p>
     </div>
     <div className="home-portfolio__btn-container">
-      <a href="/" className="home-portfolio__btn">
+      {/* <a href="/" className="home-portfolio__btn">
         <span className="home-portfolio__btn-text">Learn more</span>
         <ArrowIcon />
-      </a>
+      </a> */}
     </div>
   </div>
 );

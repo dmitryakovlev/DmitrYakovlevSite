@@ -31,7 +31,7 @@ const skillData: ISkillData[] = [
 
 const Skill: FC<ISkillData> = ({ img, title, text }) => (
   <div className="home-skills__item">
-    <img className="home-skills__img" src={img} alt={title} />
+    {/* <img className="home-skills__img" src={img} alt={title} /> */}
     <h2>{title}</h2>
     <p className="home-skills__text">{text}</p>
   </div>

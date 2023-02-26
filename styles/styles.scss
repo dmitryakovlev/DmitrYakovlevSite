@@ -86,22 +86,5 @@ p {
   color: $color-secondary;
 }
 
-// Mailgo
-.m-modal.m-dark {
-  .m-modal-content {
-    background-color: $color-secondary !important;
-    border: 4px solid rgba($color-light, 0.05);
-
-    a {
-      border-radius: 10rem;
-    }
-  }
-
-  #m-outlook,
-  #m-yahoo {
-    display: none;
-  }
-}
-
 // Partial with responsive styles
 @import "responsive";

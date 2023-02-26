@@ -76,14 +76,14 @@ const Scroll = () => {
 const Header = () => (
   <div className="home home-header">
     <div className="container">
-      <h1 className="home-header__title">Hi, I’m Dmitriy Yakovlev</h1>
+      <h1 className="home-header__title">Hi, I&apos;m Dmitriy Yakovlev</h1>
       <h2 className="home-header__subtitle">
         UX/UI designer and front-end developer
       </h2>
       <p className="home-header__text">
         Here you can see my portfolio works and read a little about me. You can
-        also contact me with a proposal for cooperation. I'm pleased to take a
-        part in interesting projects. Let's start!
+        also contact me with a proposal for cooperation. I&apos;m pleased to take a
+        part in interesting projects. Let&apos;s start!
       </p>
       <div className="home-header__social">
         {socialLink.map((param) => (

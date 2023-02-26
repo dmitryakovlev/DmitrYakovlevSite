@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Head from "next/head";
-import Footer from "@components/Footer";
+import Footer from "src/components/Footer";
 
 const Layout: FC<{
   title: string;
