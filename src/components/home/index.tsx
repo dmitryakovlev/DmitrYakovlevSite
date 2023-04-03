@@ -1,57 +1,73 @@
-import { Container, Flex, Text, Title } from '@mantine/core'
+import {
+  ActionIcon,
+  Anchor,
+  Avatar,
+  Container,
+  Flex,
+  Text,
+  Title,
+} from '@mantine/core'
+import {
+  IconBrandFacebook,
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+} from '@tabler/icons-react'
+import Head from 'next/head'
+
+import avatar from './avatar.webp'
 
 interface ISocialLink {
   id: number
   url: string
-  className: string
+  icon: JSX.Element
 }
 
 const socialLink: ISocialLink[] = [
   {
     id: 0,
     url: 'https://github.com/dmitryakovlev',
-    className: 'github',
+    icon: <IconBrandGithub size="1.5rem" />,
   },
   {
     id: 1,
     url: 'https://www.linkedin.com/in/dmitryakovlev/',
-    className: 'linkedin',
+    icon: <IconBrandLinkedin size="1.5rem" />,
   },
   {
     id: 2,
     url: 'https://www.facebook.com/dmitr.yakovlev',
-    className: 'facebook',
+    icon: <IconBrandFacebook size="1.5rem" />,
   },
   {
     id: 3,
     url: 'https://www.instagram.com/dmitr.yakovlev/',
-    className: 'instagram',
+    icon: <IconBrandInstagram size="1.5rem" />,
   },
 ]
-
-// const HeaderSocial: FC<ISocialLink> = ({ url, className }) => (
-//   <a
-//     href={url}
-//     className={`home-header__social-img ${className}`}
-//     target="_blank"
-//   ></a>
-// )
 
 export default function Home() {
   return (
     <>
       <Container size="lg" px={{ base: 'md', xs: '4rem' }}>
         <Flex direction="column" maw="40rem">
+          <Avatar
+            src="/images/avatar.webp"
+            size="xl"
+            radius="10rem"
+            alt="it's me"
+          />
           <Title
+            mt="lg"
             sx={(theme) => ({
               fontSize: '2rem',
 
               [`@media (min-width: ${theme.breakpoints.sm})`]: {
-                fontSize: '3.5rem',
+                fontSize: '3rem',
               },
             })}
           >
-            UX/UI Designer & Front-end Developer
+            UX/UI Designer & Frontend Developer
           </Title>
           <Text mt="lg" c="dimmed">
             {`
@@ -61,6 +77,15 @@ export default function Home() {
             projects. Let's start!
             `}
           </Text>
+          <Flex mt="lg" gap="sm">
+            {socialLink.map(({ ...props }, key) => (
+              <Anchor key={key} href={props.url} target="_blank">
+                <ActionIcon size="lg" c="dimmed">
+                  {props.icon}
+                </ActionIcon>
+              </Anchor>
+            ))}
+          </Flex>
         </Flex>
       </Container>
       {/* <Skills />
@@ -71,20 +96,6 @@ export default function Home() {
   )
 }
 
-//   <h1 className="home-header__title">Hi, I&apos;m Dmitriy Yakovlev</h1>
-//   <h2 className="home-header__subtitle">
-//
-//   </h2>
-//   <p className="home-header__text">
-//     Here you can see my portfolio works and read a little about me. You can
-//     also contact me with a proposal for cooperation. I&apos;m pleased to
-//     take a part in interesting projects. Let&apos;s start!
-//   </p>
-//   <div className="home-header__social">
-//     {socialLink.map((param) => (
-//       <HeaderSocial {...param} key={param.id} />
-//     ))}
-//   </div>
 //   <a href="/pdf/CV0321.pdf" className="home-header__btn" target="_blank">
 //     Open my CV
 //   </a>

@@ -1,10 +1,10 @@
-import { FC } from "react";
-import Head from "next/head";
-import Footer from "src/components/Footer";
+import { FC } from 'react'
+import Head from 'next/head'
+import Footer from '@/components/Footer'
 
 const Layout: FC<{
-  title: string;
-  children: JSX.Element | JSX.IntrinsicElements;
+  title: string
+  children: JSX.Element | JSX.IntrinsicElements
 }> = ({ title, children }) => (
   <div className="layout">
     <Head>
@@ -16,6 +16,6 @@ const Layout: FC<{
     <main className="main">{children}</main>
     <Footer />
   </div>
-);
+)
 
-export default Layout;
+export default Layout

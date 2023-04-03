@@ -17,10 +17,16 @@
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
-      "@images/*": ["src/images/*"]
+      "@images/*": ["public/images/*"]
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/_app.js", "src/pages/_document.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/_app.js",
+    "src/pages/_document.jsx"
+  ],
   "exclude": ["node_modules"]
 }
