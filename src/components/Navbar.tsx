@@ -1,107 +1,126 @@
-import { useState } from 'react'
+import Link from 'next/link'
 import {
-  createStyles,
+  ActionIcon,
+  useMantineColorScheme,
   Header,
   Container,
   Group,
   Burger,
   rem,
+  Avatar,
+  NavLink,
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import Link from 'next/link'
+import { SunIcon, MoonIcon } from '@heroicons/react/20/solid'
+import { useRouter } from 'next/router'
 
-const useStyles = createStyles((theme) => ({
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: '100%',
-  },
+type Navbar = {
+  link: string
+  label: string
+}[]
 
-  links: {
-    [theme.fn.smallerThan('xs')]: {
-      display: 'none',
-    },
-  },
+const navbar: Navbar = [
+  { link: '/about', label: 'About' },
+  { link: '/projects', label: 'Projects' },
+  { link: '/uses', label: 'Uses' },
+]
 
-  burger: {
-    [theme.fn.largerThan('xs')]: {
-      display: 'none',
-    },
-  },
+const Navbar = () => {
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme()
+  const dark = colorScheme === 'dark'
+  const router = useRouter()
 
-  link: {
-    display: 'block',
-    lineHeight: 1,
-    padding: `${rem(8)} ${rem(12)}`,
-    borderRadius: theme.radius.sm,
-    textDecoration: 'none',
-    color:
-      theme.colorScheme === 'dark'
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
-
-    '&:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
-    },
-  },
-
-  linkActive: {
-    '&, &:hover': {
-      backgroundColor: theme.fn.variant({
-        variant: 'light',
-        color: theme.primaryColor,
-      }).background,
-      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor })
-        .color,
-    },
-  },
-}))
-
-interface HeaderSimpleProps {
-  links: { link: string; label: string }[]
-}
-
-export function Navbar({ links }: HeaderSimpleProps) {
   const [opened, { toggle }] = useDisclosure(false)
-  const [active, setActive] = useState(links[0].link)
-  const { classes, cx } = useStyles()
 
-  const items = links.map((link) => (
-    <Link
-      key={link.label}
-      href={link.link}
-      className={cx(classes.link, {
-        [classes.linkActive]: active === link.link,
-      })}
-      onClick={(event) => {
-        event.preventDefault()
-        setActive(link.link)
-      }}
-    >
-      {link.label}
+  const items = navbar.map((item) => (
+    <Link key={item.label} href={item.link} style={{ textDecoration: 'none' }}>
+      <NavLink
+        label={item.label}
+        active={router.pathname === item.link}
+        styles={(theme) => ({
+          root: {
+            fontWeight: 600,
+            borderBottom: '1px solid transparent',
+            transition: 'all 200ms',
+
+            '&:hover': {
+              backgroundColor: 'transparent',
+              color: `${
+                theme.colorScheme === 'dark'
+                  ? theme.colors.orange[4]
+                  : theme.colors.orange[6]
+              }`,
+            },
+
+            '&[data-active]': {
+              backgroundColor: 'transparent',
+              color: `${
+                theme.colorScheme === 'dark'
+                  ? theme.colors.orange[4]
+                  : theme.colors.orange[6]
+              }`,
+              borderColor: `${
+                theme.colorScheme === 'dark'
+                  ? theme.colors.orange[4]
+                  : theme.colors.orange[6]
+              }`,
+            },
+
+            '&[data-active]:hover': {
+              backgroundColor: 'transparent',
+            },
+          },
+        })}
+      />
     </Link>
   ))
 
   return (
-    <Header height={60} mb={120}>
-      <Container className={classes.header}>
-        <Group spacing={5} className={classes.links}>
+    <Header height="4rem" pos="sticky">
+      <Container
+        size="lg"
+        px={{ base: 'md', xs: '4rem' }}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          height: '100%',
+        }}
+      >
+        <Link href="/">
+          <Avatar
+            src="/images/avatar.webp"
+            size="2.125rem"
+            radius="10rem"
+            alt="it's me"
+          />
+        </Link>
+
+        <Group display={{ base: 'none', sm: 'flex' }} spacing="0" px="md">
           {items}
         </Group>
-
         <Burger
+          display={{ base: 'block', sm: 'none' }}
           opened={opened}
           onClick={toggle}
-          className={classes.burger}
           size="sm"
         />
+        <ActionIcon
+          display={{ base: 'none', sm: 'flex' }}
+          variant="subtle"
+          onClick={() => toggleColorScheme()}
+          title="Toggle dark mode"
+          size="lg"
+        >
+          {dark ? (
+            <SunIcon width="1.5rem" height="1.5rem" />
+          ) : (
+            <MoonIcon width="1.5rem" height="1.5rem" />
+          )}
+        </ActionIcon>
       </Container>
     </Header>
   )
 }
+
+export default Navbar
